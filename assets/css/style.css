@@ -10990,8 +10990,9 @@ textarea.form-control-lg {
 .szlaki {
   padding: 4rem 0;
 }
-.szlaki button {
-  text-transform: capitalize;
+
+.opis {
+  padding-bottom: 4rem;
 }
 
 .portfolio-box {
