@@ -9,7 +9,7 @@
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
-  --bs-pink: #d122e3;
+  --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
@@ -237,7 +237,7 @@ pre code {
 
 code {
   font-size: 0.875em;
-  color: #d122e3;
+  color: #d63384;
   word-wrap: break-word;
 }
 a > code {
@@ -10846,6 +10846,14 @@ textarea.form-control-lg {
   background: linear-gradient(to right, rgba(44, 62, 80, 0.95), rgba(189, 195, 199, 0.95));
 }
 
+.map-container {
+  padding-top: 4rem;
+}
+.map-container #mapid {
+  width: 100%;
+  height: 40rem;
+}
+
 .footer {
   padding-top: 1rem;
   background-color: #151414;
@@ -10979,10 +10987,10 @@ textarea.form-control-lg {
   font-weight: 600;
 }
 
-.portfolio {
+.szlaki {
   padding: 4rem 0;
 }
-.portfolio button {
+.szlaki button {
   text-transform: capitalize;
 }
 
@@ -10992,7 +11000,7 @@ textarea.form-control-lg {
   height: 18.5rem;
   overflow: hidden;
   margin-bottom: 1.2rem;
-  border-top: 0.5rem solid #bb6ef5;
+  border-top: 0.5rem solid #212529;
 }
 .portfolio-box img {
   width: 100%;

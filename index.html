@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/glightbox/dist/css/glightbox.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="../Szlaki-turystyczne-Lublina/node_modules/leaflet/dist/leaflet.css"/>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
     
 </head>
 <body>
@@ -33,10 +33,13 @@
           <a class="nav-link" aria-current="page" href="#">Start</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Funkcjonalności</a>
+          <a class="nav-link" href="#services">Cel aplikacji</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mapa główna</a>
+          <a class="nav-link" href="#map">Mapa główna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inne szlaki</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Wyniki ankiet</a>
@@ -55,9 +58,11 @@
           <span class="display-2--intro">Trasy turystyczne po Lublinie - serwis interaktywny</span>
           <span class="display-2--description lh-base">tutaj będzie ogólny opis aplikacji</span>
         </h1>
-        <button type="button" class="rounded-pill btn-rounded">Mapa?
-        <span><i class="fas fa-arrow-right"></i></span>
-      </button>
+        <a href="#map">
+          <button type="button" class="rounded-pill btn-rounded">Przejdź dalej
+          <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </a>
       </div>
       <div class="col-md-6 intros text-end">
           <img src="assets/images/arts/Travel_plans2.svg" alt="Travel planning illustration" class="img-fluid">
@@ -71,13 +76,13 @@
 <section id="services" class="services">
   <div class="container">
     <div class="row text-center">
-      <h1 class="display-3 fw-bold">Funkcjonalności</h1>
+      <h1 class="display-3 fw-bold">Cel stworzenia aplikacji</h1>
       <div class="heading-line mb-1"></div>
     </div>
     <div class="row pt-2 pb-2 mt-0 mb-3">
       <div class="col-md-6 border-right ">
         <div class="bg-white p-3">
-          <h2 class="fw-bold text-capitalize text-center">Our services range from initial design to deployment anywhere anytime</h2>
+          <h2 class="fw-bold text-capitalize text-center">Opis bardziej szczegółowy aplikacji/działania</h2>
         </div>
       </div>
       <div class="col-md-6">
@@ -94,12 +99,12 @@
   </div>
   <!--SERVICES CONTENT-->
   <div class="container">
-    <!--MARKETING CONTENT-->
+    <!--SEKCJA PROMOCYJNA-->
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
         <div class="services__content">
           <div class="icon d-block fas fa-paper-plane"></div>
-          <h3 class="display-3--title mt-1">Marketing</h3>
+          <h3 class="display-3--title mt-1">Promocja Lublina</h3>
           <p class="lh-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, explicabo necessitatibus. Possimus, excep
             uri. Neque at placeat dolorum quidem ad dolor eum eligendi corrupti, repellendus ratione recusandae odio nam.
@@ -115,7 +120,7 @@
         </div>
       </div>
     </div>
-    <!--WEB DEVELOPMENT CONTENT-->
+    <!--SEKCJA PROMOCYJNA-->
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
         <div class="services__pic">
@@ -125,7 +130,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
         <div class="services__content">
           <div class="icon d-block fas fa-code"></div>
-          <h3 class="display-3--title mt-1">Web Development</h3>
+          <h3 class="display-3--title mt-1">Pomoc dla turystów</h3>
           <p class="lh-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, explicabo necessitatibus. Possimus, excep
             uri. Neque at placeat dolorum quidem ad dolor eum eligendi corrupti, repellendus ratione recusandae odio nam.
@@ -136,12 +141,12 @@
         </div>
       </div>
     </div>
-    <!--CLOUD HOSTING CONTENT-->
+    <!--SEKCJA 3-->
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
         <div class="services__content">
           <div class="icon d-block fas fa-cloud"></div>
-          <h3 class="display-3--title mt-1">Cloud Hosting</h3>
+          <h3 class="display-3--title mt-1">Wyznaczenie najpopularniejszych miejsc</h3>
           <p class="lh-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, explicabo necessitatibus. Possimus, excep
             uri. Neque at placeat dolorum quidem ad dolor eum eligendi corrupti, repellendus ratione recusandae odio nam.
@@ -166,13 +171,13 @@
       <h1 class="display-3 fw-bold text-uppercase">Mapa główna</h1>
       <div class="heading-line"></div>
       <div class="map-container">
-        <div id="mapid" style="width: 40rem; height: 40rem;"></div>
+        <div id="mapid"></div>
       </div>
     </div>
   </div>
 </section>
 <!--START SECTION 7 - THE PORTFOLIO-->
-<section id="portfolio" class="portfolio">
+<section id="szlaki" class="szlaki">
   <div class="container">
     <div class="row text-center mt-5">
       <h1 class="display-3 fw-bold">Latest work</h1>
@@ -302,7 +307,7 @@
 
     <script>
 
-	    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	    var mymap = L.map('mapid').setView([51.247, 22.56], 13);
 
     	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 	  	maxZoom: 18,
