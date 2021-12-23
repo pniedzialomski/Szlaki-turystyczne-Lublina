@@ -14,9 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/glightbox/dist/css/glightbox.css">
-
     <link rel="stylesheet" href="../Szlaki-turystyczne-Lublina/node_modules/leaflet/dist/leaflet.css"/>
-    <script src="node_modules/leaflet/dist/leaflet.js"></script>
     
 </head>
 <body>
@@ -169,6 +167,12 @@
     <div class="row text-center">
       <h1 class="display-3 fw-bold text-uppercase">Mapa główna</h1>
       <div class="heading-line"></div>
+      <button id="szlaki">Wszystkie szlaki</button>
+      <button id="szlak1">szlak 1</button>
+      <button id="szlak2">szlak 2</button>
+      <button id="szlak3">szlak 3</button>
+      <button id="szlak4">szlak 4</button>
+      <button id="szlak5">szlak 5</button>
       <div class="map-container">
         <div id="mapid"></div>
       </div>
@@ -188,7 +192,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="portfolio-box shadow">
           <img src="assets/images/portfolio/portfolio-1.png" alt="portfolio 1 image" title="portfolio 1 picture" class="img-fluid">
-          <div class="portfolio-info">
+          <div class="portfolio-info" role="button" data-toggle="modal" data-target="#Szlak1">
             <div class="caption">
               <h4>Jagielloński szlak Unii Lubelskiej</h4>
               <p>Czas przejścia: 2-3 godziny</p>
@@ -199,7 +203,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="portfolio-box shadow">
           <img src="assets/images/portfolio/portfolio-2.jpg" alt="portfolio 2 image" title="portfolio 2 picture" class="img-fluid">
-          <div class="portfolio-info">
+          <div class="portfolio-info" id="szlak2" role="button">
             <div class="caption">
               <h4>szlak pamięci żydów lubelskich</h4>
               <p>Czas przejścia: 3-4 godziny</p>
@@ -247,22 +251,34 @@
 <a href="#" class="shadow btn-primary rounded-circle back-to-top">
   <i class="fas fa-chevron-up"></i>
 </a>
+<!--MODAL SZLAK 1-->
+<div class="modal fade bd-example-modal-xl" id="Szlak1" tabindex="-1" role="dialog" aria-labelledby="Szlak1" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Szlak1label">Jagielloński szlak Unii Lubelskiej</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>tutaj coś się dzieje</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/leaflet-ajax/dist/leaflet.ajax.js"></script>
     <script src="/node_modules/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="assets/bootstrap.bundle.js"></script>
-
-    <script>
-
-	    var mymap = L.map('mapid').setView([51.247, 22.56], 13);
-
-    	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-	  	maxZoom: 18,
-	  	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  		id: 'mapbox/streets-v11',
-	  	tileSize: 512,
-  		zoomOffset: -1
-    	}).addTo(mymap);
-</script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/main.js"></script>
+  </body>
 </html>

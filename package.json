@@ -9,11 +9,7 @@
   "keywords": [
     "Bootstrap",
     "bootstrap-v5",
-    "sass",
-    "portfolio",
-    "learning",
-    "learn-bootstrap",
-    "learn-sass"
+    "sass"
   ],
   "author": "Paweł Niedziałomski",
   "license": "ISC",
@@ -26,6 +22,7 @@
     "bootstrap": "^5.0.1",
     "glightbox": "^3.0.9",
     "leaflet": "^1.7.1",
+    "leaflet-ajax": "^2.1.0",
     "postcss-cli": "^8.3.1"
   }
 }
