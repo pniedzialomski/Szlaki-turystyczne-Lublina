@@ -87,18 +87,18 @@ promise.then(function(data){
                     return L.marker(latlng, {
                         icon: greenIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 case '8':
                     return L.marker(latlng, {
                         icon: redIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 default:
                     return L.marker(latlng, {
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
             }   
             }
@@ -113,19 +113,19 @@ promise.then(function(data){
                     return L.marker(latlng, {
                         icon: greenIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 case '13':
                     return L.marker(latlng, {
                         icon: redIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 default:
                     return L.marker(latlng, {
                         icon: violetIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
             }   
             }
@@ -140,19 +140,19 @@ promise.then(function(data){
                     return L.marker(latlng, {
                         icon: greenIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 case '12':
                     return L.marker(latlng, {
                         icon: redIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 default:
                     return L.marker(latlng, {
                         icon: greyIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
             }   
             }
@@ -167,19 +167,19 @@ promise.then(function(data){
                     return L.marker(latlng, {
                         icon: greenIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 case '16':
                     return L.marker(latlng, {
                         icon: redIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 default:
                     return L.marker(latlng, {
                         icon: goldIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
             }   
             }
@@ -194,19 +194,19 @@ promise.then(function(data){
                     return L.marker(latlng, {
                         icon: greenIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 case '17':
                     return L.marker(latlng, {
                         icon: redIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
                 default:
                     return L.marker(latlng, {
                         icon: orangeIcon
                     }).on("mouseover", function(){
-                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
             }   
             }
