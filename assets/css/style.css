@@ -10854,6 +10854,13 @@ textarea.form-control-lg {
   height: 40rem;
 }
 
+.button_group {
+  padding: 4rem;
+}
+.button_group button {
+  margin: 0.25rem;
+}
+
 .footer {
   padding-top: 1rem;
   background-color: #151414;

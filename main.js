@@ -26,6 +26,14 @@ var goldIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
+var orangeIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 var redIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -36,6 +44,14 @@ var redIcon = new L.Icon({
 });
 var violetIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+var greyIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -66,60 +82,134 @@ promise.then(function(data){
             return feature.properties.szlak_name == "Jagielloński szlak Unii Lubelskiej";
         },
         pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-            }).on("mouseover", function(){
-                this.bindPopup(feature.properties.przys_name).openPopup();
-            });
-        }
+            switch(feature.properties.przys_nr.toString()){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                case '8':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+            }   
+            }
     });
     var szlak2 = L.geoJSON(data, {
         filter: function(feature, layer) {
             return feature.properties.szlak_name == "Szlak pamięci Żydów Lubelskich";
         },
         pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-                icon: violetIcon
-            }).on("mouseover", function(){
-                this.bindPopup("<b>"+feature.properties.szlak_name+"</b>"+"</br> Przystanek nr."
-                +feature.properties.przys_nr.toString()+" "+feature.properties.przys_name).openPopup();
-            });
-        }
+            switch(feature.properties.przys_nr.toString()){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                case '13':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: violetIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+            }   
+            }
     });
     var szlak3 = L.geoJSON(data, {
         filter: function(feature, layer) {
             return feature.properties.szlak_name == "Szlak Wielokulturowy";
         },
         pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-                icon: redIcon
-            }).on("mouseover", function(){
-                this.bindPopup("<b>"+feature.properties.szlak_name+"</b>"+"</br>"+feature.properties.przys_name).openPopup();
-            });
-        }
+            switch(feature.properties.przys_nr.toString()){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                case '12':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: greyIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+            }   
+            }
     });
     var szlak4 = L.geoJSON(data, {
         filter: function(feature, layer) {
             return feature.properties.szlak_name == "Szlak Zabytków Architektury";
         },
         pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-                icon: goldIcon
-            }).on("mouseover", function(){
-                this.bindPopup(feature.properties.przys_name).openPopup();
-            });
-        }
+            switch(feature.properties.przys_nr.toString()){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                case '16':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: goldIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+            }   
+            }
     });
     var szlak5 = L.geoJSON(data, {
         filter: function(feature, layer) {
             return feature.properties.szlak_name == "Szlak Znanych Lublinian";
         },
         pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-                icon: greenIcon
-            }).on("mouseover", function(){
-                this.bindPopup(feature.properties.przys_name).openPopup();
-            });
-        }
+            switch(feature.properties.przys_nr.toString()){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                case '17':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: orangeIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup(feature.properties.przys_name).openPopup();
+                    });
+            }   
+            }
 
     });
     function onEachFeature(feature, layer){
@@ -140,7 +230,7 @@ promise.then(function(data){
     });         
     $.getJSON('szlak3.geojson', function(data){
         droga3 = L.geoJSON(data,{
-            color: 'red',
+            color: 'grey',
             onEachFeature: onEachFeature
         })
     }); 
@@ -152,7 +242,7 @@ promise.then(function(data){
     }); 
     $.getJSON('szlak5.geojson', function(data){
         droga5 = L.geoJSON(data,{
-            color: 'darkgreen',
+            color: 'orange',
             onEachFeature: onEachFeature
         })
     }); 
