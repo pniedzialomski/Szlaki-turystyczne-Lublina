@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "muzea",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Zamkowa", "Numer": "1", "Nazwa": "Muzeum na Zamku", "Cz. 1 Licz": "60", "Cz. 2 Licz": "65" }, "geometry": { "type": "Point", "coordinates": [ 22.599127164463688, 51.234557091281765 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Aleja Warszawska", "Numer": "96", "Nazwa": "Muzeum Wsi Lubelskiej", "Cz. 1 Licz": "55", "Cz. 2 Licz": "53" }, "geometry": { "type": "Point", "coordinates": [ 22.505601910079982, 51.262603373430053 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Złota", "Numer": "3", "Nazwa": "Muzeum Józefa Czechowicza", "Cz. 1 Licz": "6", "Cz. 2 Licz": "6" }, "geometry": { "type": "Point", "coordinates": [ 22.569066215980087, 51.247856535869978 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Droga Męczenników Majdanka", "Numer": "67", "Nazwa": "Muzeum na Majdanku", "Cz. 1 Licz": "54", "Cz. 2 Licz": "51" }, "geometry": { "type": "Point", "coordinates": [ 22.606321901965085, 51.225329489669761 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Rynek", "Numer": "1", "Nazwa": "Lubelska Trasa Podziemna", "Cz. 1 Licz": "25", "Cz. 2 Licz": "32" }, "geometry": { "type": "Point", "coordinates": [ 22.567805995637944, 51.247894623264756 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Grodzka", "Numer": "5a", "Nazwa": "Muzeum Historii Farmacji", "Cz. 1 Licz": "3", "Cz. 2 Licz": "5" }, "geometry": { "type": "Point", "coordinates": [ 22.568490102528266, 51.248540470564059 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Królewska", "Numer": "10", "Nazwa": "Muzeum Archidiecezjalne", "Cz. 1 Licz": "4", "Cz. 2 Licz": "1" }, "geometry": { "type": "Point", "coordinates": [ 22.568292129502584, 51.246721137853051 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Szewska", "Numer": "4", "Nazwa": "Muzeum Cebularza", "Cz. 1 Licz": "1", "Cz. 2 Licz": "1" }, "geometry": { "type": "Point", "coordinates": [ 22.565177835819142, 51.250640223601579 ] } }
+]
+}

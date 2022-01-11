@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "miejsca_kultury",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Jezuicka", "Numer": "18", "Nazwa": "Teatr Stary", "Cz. 1 Licz": "12", "Cz. 2 Licz": "15" }, "geometry": { "type": "Point", "coordinates": [ 22.569186790109075, 51.247286789326949 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Narutowicza", "Numer": "17", "Nazwa": "Teatr im. J. Osterwy", "Cz. 1 Licz": "25", "Cz. 2 Licz": "22" }, "geometry": { "type": "Point", "coordinates": [ 22.561556785481415, 51.246452988118847 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Grodzka", "Numer": "21", "Nazwa": "Teatr NN", "Cz. 1 Licz": "6", "Cz. 2 Licz": "7" }, "geometry": { "type": "Point", "coordinates": [ 22.569955676997051, 51.249640760973278 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Marii Curie-Skłodowskiej", "Numer": "5", "Nazwa": "Teatr Muzyczny", "Cz. 1 Licz": "7", "Cz. 2 Licz": "20" }, "geometry": { "type": "Point", "coordinates": [ 22.548483040922676, 51.246184222600867 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Peowiaków", "Numer": "12", "Nazwa": "Centrum Kultury", "Cz. 1 Licz": "53", "Cz. 2 Licz": "58" }, "geometry": { "type": "Point", "coordinates": [ 22.557943533585888, 51.246565475591886 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Bernardyńska", "Numer": "15", "Nazwa": "Kino Perła", "Cz. 1 Licz": "16", "Cz. 2 Licz": "18" }, "geometry": { "type": "Point", "coordinates": [ 22.567567147585656, 51.244005159722256 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Radziszewskiego", "Numer": "8", "Nazwa": "Kino Bajka", "Cz. 1 Licz": "29", "Cz. 2 Licz": "17" }, "geometry": { "type": "Point", "coordinates": [ 22.552396522507404, 51.212286429048959 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Lipowa", "Numer": "13", "Nazwa": "Cinema City Plaza", "Cz. 1 Licz": "90", "Cz. 2 Licz": "40" }, "geometry": { "type": "Point", "coordinates": [ 22.55198113797405, 51.244919779505985 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Wincentego Witosa", "Numer": "32", "Nazwa": "Cinema City Felicity", "Cz. 1 Licz": "38", "Cz. 2 Licz": "22" }, "geometry": { "type": "Point", "coordinates": [ 22.612586082337209, 51.23100532994021 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Spółdzielczości pracy", "Numer": "36b", "Nazwa": "Multikino Olimp", "Cz. 1 Licz": "41", "Cz. 2 Licz": "17" }, "geometry": { "type": "Point", "coordinates": [ 22.57145811173957, 51.267114195422089 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Plac Teatralny", "Numer": "1", "Nazwa": "Centrum Spotkania Kultur", "Cz. 1 Licz": "1", "Cz. 2 Licz": "1" }, "geometry": { "type": "Point", "coordinates": [ 22.548553004058615, 51.247230674164655 ] } }
+]
+}

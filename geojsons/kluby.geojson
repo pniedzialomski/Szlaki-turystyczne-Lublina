@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "kluby",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Nadbystrzycka", "Numer": "40a", "Nazwa": "Kazik", "Cz. 1 Licz": "4", "Cz. 2 Licz": "3" }, "geometry": { "type": "Point", "coordinates": [ 22.547091516346111, 51.235115738875407 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Krakowskie Przedmieście", "Numer": "19", "Nazwa": "Dom Kultury", "Cz. 1 Licz": "14", "Cz. 2 Licz": "11" }, "geometry": { "type": "Point", "coordinates": [ 22.563390846266127, 51.247837772021569 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Zesłańców Sybiru", "Numer": "5", "Nazwa": "Helium", "Cz. 1 Licz": "48", "Cz. 2 Licz": "32" }, "geometry": { "type": "Point", "coordinates": [ 22.557718949052095, 51.245392500249054 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Aleja Józefa Piłsudskiego", "Numer": "13", "Nazwa": "Graffiti", "Cz. 1 Licz": "1", "Cz. 2 Licz": "0" }, "geometry": { "type": "Point", "coordinates": [ 22.557175162857597, 51.240376823567345 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Krakowskie Przedmieście", "Numer": "25", "Nazwa": "Ostro", "Cz. 1 Licz": "1", "Cz. 2 Licz": "1" }, "geometry": { "type": "Point", "coordinates": [ 22.562797964945137, 51.247904841179562 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Sądowa", "Numer": "2", "Nazwa": "Wyrko", "Cz. 1 Licz": "1", "Cz. 2 Licz": "4" }, "geometry": { "type": "Point", "coordinates": [ 22.526333195132885, 51.25413536555947 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Bernardyńsk", "Numer": "15", "Nazwa": "Radość", "Cz. 1 Licz": "2", "Cz. 2 Licz": "4" }, "geometry": { "type": "Point", "coordinates": [ 22.567567147585656, 51.244005159722256 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Aleja Józefa Piłsudskiego", "Numer": "22", "Nazwa": "Plener", "Cz. 1 Licz": "1", "Cz. 2 Licz": "2" }, "geometry": { "type": "Point", "coordinates": [ 22.563100452386713, 51.23976061925746 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Zesłańców Sybiru", "Numer": "5", "Nazwa": "Riviera", "Cz. 1 Licz": "7", "Cz. 2 Licz": "1" }, "geometry": { "type": "Point", "coordinates": [ 22.557718949052095, 51.245392500249054 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Zesłańców Sybiru", "Numer": "5", "Nazwa": "Cubano", "Cz. 1 Licz": "7", "Cz. 2 Licz": "3" }, "geometry": { "type": "Point", "coordinates": [ 22.557718949052095, 51.245392500249054 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Okopowa", "Numer": "5", "Nazwa": "Tifosi", "Cz. 1 Licz": "1", "Cz. 2 Licz": "0" }, "geometry": { "type": "Point", "coordinates": [ 22.555896252324068, 51.245421581088372 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Zesłańców Sybiru", "Numer": "5", "Nazwa": "Rzut Beretem", "Cz. 1 Licz": "7", "Cz. 2 Licz": "3" }, "geometry": { "type": "Point", "coordinates": [ 22.557718949052095, 51.245392500249054 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Orla", "Numer": "8", "Nazwa": "Blues Brothers", "Cz. 1 Licz": "1", "Cz. 2 Licz": "0" }, "geometry": { "type": "Point", "coordinates": [ 22.555774336903514, 51.244669262757704 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Radziszewskiego", "Numer": "8", "Nazwa": "Silence", "Cz. 1 Licz": "4", "Cz. 2 Licz": "3" }, "geometry": { "type": "Point", "coordinates": [ 22.552396522507404, 51.212286429048959 ] } },
+{ "type": "Feature", "properties": { "Miejscowo�": "Lublin", "Ulica": "Langiewicza", "Numer": "10", "Nazwa": "Pauza", "Cz. 1 Licz": "0", "Cz. 2 Licz": "1" }, "geometry": { "type": "Point", "coordinates": [ 22.535216448223878, 51.246296083740617 ] } }
+]
+}

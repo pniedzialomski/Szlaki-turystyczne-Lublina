@@ -15,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/glightbox/dist/css/glightbox.css">
     <link rel="stylesheet" href="../Szlaki-turystyczne-Lublina/node_modules/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css">
     
 </head>
 <body>
@@ -174,6 +178,7 @@
         <button class="rounded-pill btn-rounded border-primary" id="szlak3">Szlak Wielokulturowy<span><i class="fas fa-location-arrow"></i></span></button>
         <button class="rounded-pill btn-rounded border-primary" id="szlak4">Szlak Zabytków Architektury<span><i class="fas fa-location-arrow"></i></span></button>
         <button class="rounded-pill btn-rounded border-primary" id="szlak5">Szlak Znanych Lublinian<span><i class="fas fa-location-arrow"></i></span></button>
+        <button class="rounded-pill btn-rounded border-primary" id="clearMap">Wyczyść mapę<span><i class="fas fa-minus"></i></span></button>
       </div>
       <div class="map-container">
         <div id="mapid"></div>
@@ -276,11 +281,14 @@
 
     <script src="node_modules/leaflet/dist/leaflet.js"></script>
     <script src="node_modules/leaflet-ajax/dist/leaflet.ajax.js"></script>
+    <script src="node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
     <script src="/node_modules/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/main.js"></script>
+    <script src="assets/leaflet.awesome-markers.js"></script>
+    
+    <script src="main.js"></script>
   </body>
 </html>

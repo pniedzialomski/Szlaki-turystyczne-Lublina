@@ -18,6 +18,30 @@ var greenIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
+var restaurantIcon = L.AwesomeMarkers.icon({
+    icon: 'utensils',
+    prefix: 'fa',
+    markerColor: 'lightgray',
+    iconSize: [35,40]
+});
+var clubIcon = L.AwesomeMarkers.icon({
+    icon: 'glass-martini',
+    prefix: 'fa',
+    markerColor: 'pink',
+    iconSize: [35,40]
+});
+var museumIcon = L.AwesomeMarkers.icon({
+    icon: 'landmark',
+    prefix: 'fa',
+    markerColor: 'brown',
+    iconSize: [35,40]
+});
+var theatreIcon = L.AwesomeMarkers.icon({
+    icon: 'theater-masks',
+    prefix: 'fa',
+    markerColor: 'orange',
+    iconSize: [35,40]
+});
 var goldIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -70,8 +94,9 @@ var btn2 = document.getElementById("szlak2");
 var btn3 = document.getElementById("szlak3");
 var btn4 = document.getElementById("szlak4");
 var btn5 = document.getElementById("szlak5");
+var btnRemove = document.getElementById("clearMap");
 
-var promise = $.getJSON("przystanki.geojson");
+let promise = $.getJSON("geojsons/przystanki.geojson");
 promise.then(function(data){
     var szlakInfo;
 
@@ -217,30 +242,30 @@ promise.then(function(data){
     }
     //pobieranie danych dotyczących dróg między punktami na szlakach
     var droga1, droga2, droga3, droga4, droga5;
-    $.getJSON('szlak1.geojson', function(data){
+    $.getJSON('geojsons/szlak1.geojson', function(data){
         droga1 = L.geoJSON(data,{
             onEachFeature: onEachFeature
         })
     });
-    $.getJSON('szlak2.geojson', function(data){
+    $.getJSON('geojsons/szlak2.geojson', function(data){
         droga2 = L.geoJSON(data,{
             color: 'violet',
             onEachFeature: onEachFeature
         })
     });         
-    $.getJSON('szlak3.geojson', function(data){
+    $.getJSON('geojsons/szlak3.geojson', function(data){
         droga3 = L.geoJSON(data,{
             color: 'grey',
             onEachFeature: onEachFeature
         })
     }); 
-    $.getJSON('szlak4.geojson', function(data){
+    $.getJSON('geojsons/szlak4.geojson', function(data){
         droga4 = L.geoJSON(data,{
             color: 'yellow',
             onEachFeature: onEachFeature
         })
     }); 
-    $.getJSON('szlak5.geojson', function(data){
+    $.getJSON('geojsons/szlak5.geojson', function(data){
         droga5 = L.geoJSON(data,{
             color: 'orange',
             onEachFeature: onEachFeature
@@ -318,8 +343,68 @@ promise.then(function(data){
         mymap.addLayer(szlak5);
         mymap.addLayer(droga5);
     });
+    btnRemove.addEventListener("click", function(){
+        removeSzlaki();
+    });
 });
 
+let obiekty = L.markerClusterGroup();
+$.getJSON("geojsons/restauracje.geojson", function(data){
+    var restauracje = L.geoJSON(data,{
+        
+        pointToLayer: function(feature, latlng){
+            return L.marker(latlng, {
+                icon: restaurantIcon
+                }).on("mouseover", function(){
+                this.bindPopup(feature.properties.Nazwa).openPopup();
+                });
+        }
+        })
+        obiekty.addLayer(restauracje);
+    mymap.addLayer(obiekty);
+});
+$.getJSON("geojsons/kluby.geojson", function(data){
+    var kluby = L.geoJSON(data,{
+        
+        pointToLayer: function(feature, latlng){
+            return L.marker(latlng, {
+                icon: clubIcon
+                }).on("mouseover", function(){
+                this.bindPopup(feature.properties.Nazwa).openPopup();
+                });
+        }
+        })
+        obiekty.addLayer(kluby);
+    mymap.addLayer(obiekty);
+});
+$.getJSON("geojsons/muzea.geojson", function(data){
+    var muzea = L.geoJSON(data,{
+        
+        pointToLayer: function(feature, latlng){
+            return L.marker(latlng, {
+                icon: museumIcon
+                }).on("mouseover", function(){
+                this.bindPopup(feature.properties.Nazwa).openPopup();
+                });
+        }
+        })
+        obiekty.addLayer(muzea);
+    mymap.addLayer(obiekty);
+});
+$.getJSON("geojsons/miejsca_kultury.geojson", function(data){
+    var miejsca_kultury = L.geoJSON(data,{
+        
+        pointToLayer: function(feature, latlng){
+            return L.marker(latlng, {
+                icon: theatreIcon
+                }).on("mouseover", function(){
+                this.bindPopup(feature.properties.Nazwa).openPopup();
+                });
+        }
+        })
+        obiekty.addLayer(miejsca_kultury);
+    mymap.addLayer(obiekty);
+});
 /*
 szlaki.addEventListener("click", function(){
     $.getJSON("przystanki.geojson",function(data){

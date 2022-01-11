@@ -23,6 +23,7 @@
     "glightbox": "^3.0.9",
     "leaflet": "^1.7.1",
     "leaflet-ajax": "^2.1.0",
+    "leaflet.markercluster": "^1.5.3",
     "postcss-cli": "^8.3.1"
   }
 }
