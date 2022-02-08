@@ -42,6 +42,18 @@ var theatreIcon = L.AwesomeMarkers.icon({
     markerColor: 'orange',
     iconSize: [35,40]
 });
+var placeIcon = L.AwesomeMarkers.icon({
+    icon: 'archway',
+    prefix: 'fa',
+    markerColor: 'darkred',
+    iconSize: [35,40]
+});
+var greenareaIcon = L.AwesomeMarkers.icon({
+    icon: 'tree',
+    prefix: 'fa',
+    markerColor: 'darkgreen',
+    iconSize: [35,40]
+});
 var goldIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -349,6 +361,64 @@ promise.then(function(data){
 });
 
 let obiekty = L.markerClusterGroup();
+
+$.getJSON("geojsons/ankiety_obiekty.geojson", function(data){
+    let objects = L.geoJSON(data,{
+        pointToLayer: function(feature, latlng){
+            switch(feature.properties.Kategoria){
+                case "Obszary Zielone":
+                    return L.marker(latlng, {
+                        icon: greenareaIcon
+                    }).on("mouseover", function(){
+                        this.bindPopup(feature.properties.Nazwa).openPopup();
+                    });
+            }
+            switch(feature.properties.Kategoria){
+                case "Restauracje":
+                    return L.marker(latlng, {
+                        icon: restaurantIcon
+                    }).on("mouseover", function(){
+                        this.bindPopup(feature.properties.Nazwa).openPopup();
+                    });
+            }
+            switch(feature.properties.Kategoria){
+                case "Muzea":
+                    return L.marker(latlng, {
+                        icon: museumIcon
+                    }).on("mouseover", function(){
+                        this.bindPopup(feature.properties.Nazwa).openPopup();
+                    });
+            }
+            switch(feature.properties.Kategoria){
+                case "Miejsca kultury":
+                    return L.marker(latlng, {
+                        icon: theatreIcon
+                    }).on("mouseover", function(){
+                        this.bindPopup(feature.properties.Nazwa).openPopup();
+                    });
+            }
+            switch(feature.properties.Kategoria){
+                case "Kluby":
+                    return L.marker(latlng, {
+                        icon: clubIcon
+                    }).on("mouseover", function(){
+                        this.bindPopup(feature.properties.Nazwa).openPopup();
+                    });
+            }
+            switch(feature.properties.Kategoria){
+                case "Place":
+                    return L.marker(latlng, {
+                        icon: placeIcon
+                    }).on("mouseover", function(){
+                        this.bindPopup(feature.properties.Nazwa).openPopup();
+                    });
+            }
+        }
+    })
+    obiekty.addLayer(objects)
+    mymap.addLayer(obiekty);
+})
+/*
 $.getJSON("geojsons/restauracje.geojson", function(data){
     var restauracje = L.geoJSON(data,{
         
@@ -405,6 +475,7 @@ $.getJSON("geojsons/miejsca_kultury.geojson", function(data){
         obiekty.addLayer(miejsca_kultury);
     mymap.addLayer(obiekty);
 });
+*/
 /*
 szlaki.addEventListener("click", function(){
     $.getJSON("przystanki.geojson",function(data){
