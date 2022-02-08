@@ -38,3 +38,37 @@
         }
     }
 }
+.underline{
+  position:relative;
+  padding: 1rem;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+
+
+
+  &:after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+  }
+  &:hover:after{
+      width: 100%;
+  }
+}
+ ul{
+    list-style: none;
+    text-align: center;
+    li{
+        display: inline-block;
+    }
+ }

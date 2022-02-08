@@ -106,6 +106,9 @@ var btn2 = document.getElementById("szlak2");
 var btn3 = document.getElementById("szlak3");
 var btn4 = document.getElementById("szlak4");
 var btn5 = document.getElementById("szlak5");
+var btnUmcs = document.getElementById("szlakUmcs");
+var btnKul = document.getElementById("szlakKul");
+var btnstud = document.getElementById("szlakStud");
 var btnRemove = document.getElementById("clearMap");
 
 let promise = $.getJSON("geojsons/przystanki.geojson");
@@ -249,6 +252,88 @@ promise.then(function(data){
             }
 
     });
+    let szlakstud = L.geoJSON(data,{
+        filter: function(feature, layer){
+            return feature.properties.szlak_id == "6"
+        },
+        pointToLayer: function(feature, latlng) {
+            switch(feature.properties.przys_nr){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+                case '7':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: orangeIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+             }   
+        }
+    });
+    let szlakumcs = L.geoJSON(data,{
+        filter: function(feature, layer){
+            return feature.properties.szlak_id.toString() == "7"
+        },
+        pointToLayer: function(feature, latlng) {
+            switch(feature.properties.przys_nr){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+                case '7':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: orangeIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+             }   
+        }
+    });
+    let szlakkul = L.geoJSON(data,{
+        filter: function(feature, layer){
+            return feature.properties.szlak_id.toString() == "8"
+        },
+        pointToLayer: function(feature, latlng) {
+            switch(feature.properties.przys_nr){
+                case '1':
+                    return L.marker(latlng, {
+                        icon: greenIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+                case '7':
+                    return L.marker(latlng, {
+                        icon: redIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+                default:
+                    return L.marker(latlng, {
+                        icon: orangeIcon
+                    }).on("mouseover", function(){
+                    this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                    });
+             }   
+        }
+    });
+
     function onEachFeature(feature, layer){
         layer.bindPopup("Prawdopodobny czas przejścia: "+feature.properties.czas.toString()+" minut.");
     }
@@ -283,6 +368,25 @@ promise.then(function(data){
             onEachFeature: onEachFeature
         })
     }); 
+    $.getJSON('geojsons/szlakKul.geojson', function(data){
+        drogaKul = L.geoJSON(data,{
+            color: 'orange',
+            onEachFeature: onEachFeature
+        })
+    }); 
+    $.getJSON('geojsons/szlakStud.geojson', function(data){
+        drogaStud = L.geoJSON(data,{
+            color: 'orange',
+            onEachFeature: onEachFeature
+        })
+    }); 
+    $.getJSON('geojsons/szlakUmcs.geojson', function(data){
+        drogaUmcs = L.geoJSON(data,{
+            color: 'orange',
+            onEachFeature: onEachFeature
+        })
+    }); 
+
     //Czyszczenie mapy z treści
     function removeSzlaki(){
         mymap.removeLayer(szlak1);
@@ -290,12 +394,18 @@ promise.then(function(data){
         mymap.removeLayer(szlak3);
         mymap.removeLayer(szlak4);
         mymap.removeLayer(szlak5);
+        mymap.removeLayer(szlakkul);
+        mymap.removeLayer(szlakstud);
+        mymap.removeLayer(szlakumcs);
         mymap.removeLayer(wszystkieprz);
         mymap.removeLayer(droga1);
         mymap.removeLayer(droga2);
         mymap.removeLayer(droga3);
         mymap.removeLayer(droga4);
         mymap.removeLayer(droga5);
+        mymap.removeLayer(drogaKul);
+        mymap.removeLayer(drogaUmcs);
+        mymap.removeLayer(drogaStud);
                 
     };
     // Wyświetlanie treści na mapie 
@@ -308,12 +418,18 @@ promise.then(function(data){
         mymap.addLayer(szlak2);
         mymap.addLayer(szlak3);
         mymap.addLayer(szlak4);
-        mymap.addLayer(szlak5); 
+        mymap.addLayer(szlak5);
+        mymap.addLayer(szlakstud); 
+        mymap.addLayer(szlakumcs); 
+        mymap.addLayer(szlakkul);  
         mymap.addLayer(droga1);
         mymap.addLayer(droga2);
         mymap.addLayer(droga3);
         mymap.addLayer(droga4);
-        mymap.addLayer(droga5);   
+        mymap.addLayer(droga5); 
+        mymap.addLayer(drogaStud);
+        mymap.addLayer(drogaUmcs);
+        mymap.addLayer(drogaKul);  
     });
     btn1.addEventListener("click", function(){
         removeSzlaki();
@@ -355,10 +471,37 @@ promise.then(function(data){
         mymap.addLayer(szlak5);
         mymap.addLayer(droga5);
     });
+    btnstud.addEventListener("click", function(){
+        removeSzlaki();
+        mymap.fitBounds(szlakstud.getBounds(), {
+            padding: [50, 50]
+        });
+        mymap.addLayer(szlakstud);
+        mymap.addLayer(drogaStud);
+    });
+    btnKul.addEventListener("click", function(){
+        removeSzlaki();
+        mymap.fitBounds(szlakkul.getBounds(), {
+            padding: [50, 50]
+        });
+        mymap.addLayer(szlakkul);
+        mymap.addLayer(drogaKul);
+    });
+    btnUmcs.addEventListener("click", function(){
+        removeSzlaki();
+        mymap.fitBounds(szlakumcs.getBounds(), {
+            padding: [50, 50]
+        });
+        mymap.addLayer(szlakumcs);
+        mymap.addLayer(drogaUmcs);
+    });
     btnRemove.addEventListener("click", function(){
         removeSzlaki();
     });
 });
+
+
+
 
 let obiekty = L.markerClusterGroup();
 
