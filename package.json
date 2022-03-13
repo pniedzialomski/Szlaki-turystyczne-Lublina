@@ -1,27 +1,27 @@
 {
-  "name": "portfolio",
+  "name": "szlaki-turystyczne",
   "version": "1.0.0",
-  "description": "bootstrap with sass",
+  "description": "szlaki turystyczne Lublina",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch scss:assets/css",
     "publish": "subpath-as-branch --path dist --branch gh-pages"
   },
   "keywords": [
-    "Bootstrap",
-    "bootstrap-v5",
-    "sass"
+    "Szlaki",
+    "Turystyka",
+    "Praca",
+    "Magisterska"
   ],
   "author": "Paweł Niedziałomski",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {  
     "sass": "^1.35.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "autoprefixer": "^10.2.6",
     "bootstrap": "^5.0.1",
-    "glightbox": "^3.0.9",
     "leaflet": "^1.7.1",
     "leaflet-ajax": "^2.1.0",
     "leaflet.markercluster": "^1.5.3",

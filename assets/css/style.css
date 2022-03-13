@@ -10729,16 +10729,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@keyframes pulse-border {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
 .btn-rounded {
   position: relative;
   padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
@@ -11080,37 +11070,37 @@ ul li {
   transition-property: all;
 }
 
-.services {
+.info {
   position: relative;
   padding: 1rem, 0;
 }
-.services__content {
+.info__content {
   padding: 1rem;
   margin-top: 0;
 }
-.services__content p {
+.info__content p {
   font-size: 0.8rem;
 }
 @media (min-width: 992px) {
-  .services__content p {
+  .info__content p {
     font-size: 1rem;
   }
 }
 @media (min-width: 992px) {
-  .services__content {
+  .info__content {
     margin-top: 5rem;
   }
 }
-.services__content .icon {
+.info__content .icon {
   font-size: 1.5rem;
   color: #2c3e50;
 }
 @media (min-width: 992px) {
-  .services__content .icon {
+  .info__content .icon {
     font-size: 2.5rem;
   }
 }
-.services__pic {
+.info__pic {
   max-width: 100%;
 }
 

@@ -27,7 +27,7 @@ var restaurantIcon = L.AwesomeMarkers.icon({
 var clubIcon = L.AwesomeMarkers.icon({
     icon: 'glass-martini',
     prefix: 'fa',
-    markerColor: 'pink',
+    markerColor: 'pink',    
     iconSize: [35,40]
 });
 var museumIcon = L.AwesomeMarkers.icon({
@@ -109,9 +109,10 @@ var btn5 = document.getElementById("szlak5");
 var btnUmcs = document.getElementById("szlakUmcs");
 var btnKul = document.getElementById("szlakKul");
 var btnstud = document.getElementById("szlakStud");
+var btnUp = document.getElementById("szlakUp");
 var btnRemove = document.getElementById("clearMap");
 
-let promise = $.getJSON("geojsons/przystanki.geojson");
+let promise = $.getJSON("geojsons/przystanki1.geojson");
 promise.then(function(data){
     var szlakInfo;
 
@@ -333,6 +334,33 @@ promise.then(function(data){
              }   
         }
     });
+    let szlakup = L.geoJSON(data,{
+    filter: function(feature, layer){
+        return feature.properties.szlak_id.toString() == "9"
+    },
+    pointToLayer: function(feature, latlng) {
+        switch(feature.properties.przys_nr){
+            case '1':
+                return L.marker(latlng, {
+                    icon: greenIcon
+                }).on("mouseover", function(){
+                this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                });
+            case '7':
+                return L.marker(latlng, {
+                    icon: redIcon
+                }).on("mouseover", function(){
+                this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                });
+            default:
+                return L.marker(latlng, {
+                    icon: orangeIcon
+                }).on("mouseover", function(){
+                this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
+                });
+            }   
+        }
+    });
 
     function onEachFeature(feature, layer){
         layer.bindPopup("Prawdopodobny czas przejścia: "+feature.properties.czas.toString()+" minut.");
@@ -341,7 +369,8 @@ promise.then(function(data){
     var droga1, droga2, droga3, droga4, droga5;
     $.getJSON('geojsons/szlak1.geojson', function(data){
         droga1 = L.geoJSON(data,{
-            onEachFeature: onEachFeature
+            onEachFeature: onEachFeature,
+            color: '#1D2F6F'
         })
     });
     $.getJSON('geojsons/szlak2.geojson', function(data){
@@ -386,6 +415,12 @@ promise.then(function(data){
             onEachFeature: onEachFeature
         })
     }); 
+    $.getJSON('geojsons/szlakUP.geojson', function(data){
+        drogaUp = L.geoJSON(data,{
+            color: 'darkgreen',
+            onEachFeature: onEachFeature
+        })
+    }); 
 
     //Czyszczenie mapy z treści
     function removeSzlaki(){
@@ -397,6 +432,7 @@ promise.then(function(data){
         mymap.removeLayer(szlakkul);
         mymap.removeLayer(szlakstud);
         mymap.removeLayer(szlakumcs);
+        mymap.removeLayer(szlakup);
         mymap.removeLayer(wszystkieprz);
         mymap.removeLayer(droga1);
         mymap.removeLayer(droga2);
@@ -406,6 +442,7 @@ promise.then(function(data){
         mymap.removeLayer(drogaKul);
         mymap.removeLayer(drogaUmcs);
         mymap.removeLayer(drogaStud);
+        mymap.removeLayer(drogaUp);
                 
     };
     // Wyświetlanie treści na mapie 
@@ -494,6 +531,14 @@ promise.then(function(data){
         });
         mymap.addLayer(szlakumcs);
         mymap.addLayer(drogaUmcs);
+    });
+    btnUp.addEventListener("click", function(){
+        removeSzlaki();
+        mymap.fitBounds(szlakup.getBounds(), {
+            padding: [50, 50]
+        });
+        mymap.addLayer(szlakup);
+        mymap.addLayer(drogaUp);
     });
     btnRemove.addEventListener("click", function(){
         removeSzlaki();
