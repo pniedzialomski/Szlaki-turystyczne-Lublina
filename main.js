@@ -300,7 +300,6 @@ promise.then(function(data){
                     });
                 default:
                     return L.marker(latlng, {
-                        icon: orangeIcon
                     }).on("mouseover", function(){
                     this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
@@ -327,7 +326,7 @@ promise.then(function(data){
                     });
                 default:
                     return L.marker(latlng, {
-                        icon: orangeIcon
+                        icon: goldIcon
                     }).on("mouseover", function(){
                     this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                     });
@@ -354,7 +353,7 @@ promise.then(function(data){
                 });
             default:
                 return L.marker(latlng, {
-                    icon: orangeIcon
+                    icon: greenIcon
                 }).on("mouseover", function(){
                 this.bindPopup("<b style='font-size:14px;'>"+feature.properties.szlak_name+"</b><br> Przystanek nr: "+feature.properties.przys_nr.toString()+"<br>"+feature.properties.przys_name).openPopup();
                 });
@@ -399,7 +398,7 @@ promise.then(function(data){
     }); 
     $.getJSON('geojsons/szlakKul.geojson', function(data){
         drogaKul = L.geoJSON(data,{
-            color: 'orange',
+            color: 'gold',
             onEachFeature: onEachFeature
         })
     }); 
@@ -411,7 +410,7 @@ promise.then(function(data){
     }); 
     $.getJSON('geojsons/szlakUmcs.geojson', function(data){
         drogaUmcs = L.geoJSON(data,{
-            color: 'orange',
+            color: 'blue',
             onEachFeature: onEachFeature
         })
     }); 
